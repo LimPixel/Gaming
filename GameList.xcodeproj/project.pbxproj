@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		E61E4B7A26292D30004A5F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61E4B7926292D30004A5F39 /* Assets.xcassets */; };
 		E61E4B7D26292D30004A5F39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61E4B7C26292D30004A5F39 /* Preview Assets.xcassets */; };
 		E61E4B8026292D30004A5F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61E4B7E26292D30004A5F39 /* LaunchScreen.storyboard */; };
+		E61E4B9026293895004A5F39 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E4B8F26293895004A5F39 /* GameViewModel.swift */; };
+		E61E4B9326293A34004A5F39 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E4B9226293A34004A5F39 /* Games.swift */; };
+		E61E4B9626293BB0004A5F39 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E4B9526293BB0004A5F39 /* GameList.swift */; };
+		E61E4B9B26293F03004A5F39 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E4B9A26293F03004A5F39 /* GameDetail.swift */; };
+		E61E4B9E26293FDA004A5F39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61E4B9D26293FDA004A5F39 /* Profile.swift */; };
+		E61E4BA226295F2A004A5F39 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E61E4BA126295F2A004A5F39 /* SwiftyJSON */; };
+		E61E4BA62629620C004A5F39 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E61E4BA52629620C004A5F39 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,11 @@
 		E61E4B7C26292D30004A5F39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E61E4B7F26292D30004A5F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E61E4B8126292D30004A5F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61E4B8F26293895004A5F39 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		E61E4B9226293A34004A5F39 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		E61E4B9526293BB0004A5F39 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		E61E4B9A26293F03004A5F39 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
+		E61E4B9D26293FDA004A5F39 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61E4BA62629620C004A5F39 /* SDWebImageSwiftUI in Frameworks */,
+				E61E4BA226295F2A004A5F39 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +72,10 @@
 		E61E4B6F26292D2E004A5F39 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
-				E61E4B7026292D2E004A5F39 /* AppDelegate.swift */,
-				E61E4B7226292D2E004A5F39 /* SceneDelegate.swift */,
-				E61E4B7426292D2E004A5F39 /* ContentView.swift */,
+				E61E4B8B26293810004A5F39 /* Base */,
+				E61E4B8E2629382F004A5F39 /* ViewModel */,
+				E61E4B8D2629381F004A5F39 /* Model */,
+				E61E4B8926293805004A5F39 /* View */,
 				E61E4B7926292D30004A5F39 /* Assets.xcassets */,
 				E61E4B7E26292D30004A5F39 /* LaunchScreen.storyboard */,
 				E61E4B8126292D30004A5F39 /* Info.plist */,
@@ -76,6 +91,42 @@
 				E61E4B7C26292D30004A5F39 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E61E4B8926293805004A5F39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E61E4B7426292D2E004A5F39 /* ContentView.swift */,
+				E61E4B9526293BB0004A5F39 /* GameList.swift */,
+				E61E4B9A26293F03004A5F39 /* GameDetail.swift */,
+				E61E4B9D26293FDA004A5F39 /* Profile.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E61E4B8B26293810004A5F39 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E61E4B7026292D2E004A5F39 /* AppDelegate.swift */,
+				E61E4B7226292D2E004A5F39 /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E61E4B8D2629381F004A5F39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E61E4B9226293A34004A5F39 /* Games.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E61E4B8E2629382F004A5F39 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E61E4B8F26293895004A5F39 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +145,10 @@
 			dependencies = (
 			);
 			name = GameList;
+			packageProductDependencies = (
+				E61E4BA126295F2A004A5F39 /* SwiftyJSON */,
+				E61E4BA52629620C004A5F39 /* SDWebImageSwiftUI */,
+			);
 			productName = GameList;
 			productReference = E61E4B6D26292D2E004A5F39 /* GameList.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +176,10 @@
 				Base,
 			);
 			mainGroup = E61E4B6426292D2E004A5F39;
+			packageReferences = (
+				E61E4BA026295F2A004A5F39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				E61E4BA42629620C004A5F39 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E61E4B6E26292D2E004A5F39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,9 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61E4B9B26293F03004A5F39 /* GameDetail.swift in Sources */,
 				E61E4B7126292D2E004A5F39 /* AppDelegate.swift in Sources */,
 				E61E4B7326292D2E004A5F39 /* SceneDelegate.swift in Sources */,
 				E61E4B7526292D2E004A5F39 /* ContentView.swift in Sources */,
+				E61E4B9326293A34004A5F39 /* Games.swift in Sources */,
+				E61E4B9026293895004A5F39 /* GameViewModel.swift in Sources */,
+				E61E4B9626293BB0004A5F39 /* GameList.swift in Sources */,
+				E61E4B9E26293FDA004A5F39 /* Profile.swift in Sources */,
 				E61E4B7826292D2E004A5F39 /* GameList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +413,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E61E4BA026295F2A004A5F39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		E61E4BA42629620C004A5F39 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E61E4BA126295F2A004A5F39 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E61E4BA026295F2A004A5F39 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		E61E4BA52629620C004A5F39 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E61E4BA42629620C004A5F39 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E61E4B7626292D2E004A5F39 /* GameList.xcdatamodeld */ = {

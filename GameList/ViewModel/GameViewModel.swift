@@ -13,7 +13,7 @@ class GameViewModel: ObservableObject {
     @Published var dataGame = [Games]()
     
     init(){
-        let url = "https://api.rawg.io/api/games?%C3%A5=1"
+        let url = "-- API KEY --- "
         
         let session = URLSession(configuration: .default)
         
